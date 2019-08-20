@@ -24,7 +24,7 @@ steps:
     projects: '**/*.csproj'
     feedsToUse: 'config'
     nugetConfigPath: 'NuGet.config'
-    externalFeedCredentials: eneimv_nuget
+    externalFeedCredentials: nuget_trial_connection
 
 - task: DotNetCoreCLI@2
   displayName: 'Build'
@@ -62,7 +62,7 @@ steps:
   inputs:
     command: push
     nuGetFeedType: external
-    publishFeedCredentials: 'eneimv_nuget'
+    publishFeedCredentials: 'nuget_trial_connection'
     versioningScheme: byEnvVar
     versionEnvVar: version
 
